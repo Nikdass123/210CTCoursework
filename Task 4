@@ -1,0 +1,6 @@
+a = input("Enter the no.: ")            # user inputs the number
+b = str(a)
+c = []                                  # creating an empty list
+for digit in b:                         #initialling a loop
+    c.append (int(digit))               
+print(c)
