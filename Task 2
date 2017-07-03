@@ -1,0 +1,6 @@
+mylist=[]
+for i in range(1000, 3000):
+if (i%5==0) and (i%7!=0):
+mylist.append(str(i))
+
+print ','.join(mylist)
