@@ -1,0 +1,23 @@
+def find_odds(numbers, odds):
+    if len(numbers) == 0:                   # in case there is no element
+        return odds
+
+    if numbers[0] % 2 == 1:
+        odds.append(numbers[0])
+
+    return find_odds(numbers[1:],odds)      # again calling the function
+def find_evens(numbers, evens):
+    if len(numbers) == 0:                    # in case there is no element
+        return evens
+
+    if numbers[0] % 2 == 0:
+        evens.append(numbers[0])
+
+    return find_evens(numbers[1:],evens)    # again calling the function
+lower_range=int(input("enter a num: "))                    # input the lower range
+upper_range=int(input("enter a num: "))                   # input the upper range
+list=[]                                     # initiating an empty list
+for i in range(lower_range,upper_range+1):
+    list.append(i)
+print(find_evens(list,[]))
+print(find_odds(list,[]))
