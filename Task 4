@@ -1,0 +1,27 @@
+#Sum using for loop
+list=[1,2,3,4,5]            
+sum=0                       
+for x in list:
+    sum=sum+x               
+print(sum)                   
+
+
+
+# Sum using while loop
+list=[1,2,3,4,5]
+sum=0                     
+i=0                        
+while i<5:                  
+    sum=sum+list[i]
+    i=i+1
+print(sum)
+
+
+
+# sum using recursion
+def getSum(piece):         
+    if len(piece)==0:       
+        return 0
+    else:
+        return piece[0] + getSum(piece[1:])        
+print(getSum([1, 3, 4, 2, 5]))
